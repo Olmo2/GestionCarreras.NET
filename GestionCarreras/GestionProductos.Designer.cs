@@ -29,8 +29,13 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonAddProd = new System.Windows.Forms.Button();
+            this.comboBoxTipo = new System.Windows.Forms.ComboBox();
+            this.textBoxPrecio = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -43,12 +48,12 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nuevo Producto ";
             // 
-            // textBox2
+            // textBoxNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(28, 71);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.textBoxNombre.Location = new System.Drawing.Point(28, 71);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNombre.TabIndex = 1;
             // 
             // label3
             // 
@@ -59,11 +64,60 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Nombre";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(26, 111);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Tipo";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(26, 164);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Precio";
+            // 
+            // buttonAddProd
+            // 
+            this.buttonAddProd.Location = new System.Drawing.Point(29, 214);
+            this.buttonAddProd.Name = "buttonAddProd";
+            this.buttonAddProd.Size = new System.Drawing.Size(100, 23);
+            this.buttonAddProd.TabIndex = 6;
+            this.buttonAddProd.Text = "Añadir Producto";
+            this.buttonAddProd.UseVisualStyleBackColor = true;
+            this.buttonAddProd.Click += new System.EventHandler(this.buttonAddProd_Click);
+            // 
+            // comboBoxTipo
+            // 
+            this.comboBoxTipo.FormattingEnabled = true;
+            this.comboBoxTipo.Location = new System.Drawing.Point(28, 127);
+            this.comboBoxTipo.Name = "comboBoxTipo";
+            this.comboBoxTipo.Size = new System.Drawing.Size(101, 21);
+            this.comboBoxTipo.TabIndex = 7;
+            this.comboBoxTipo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // textBoxPrecio
+            // 
+            this.textBoxPrecio.Location = new System.Drawing.Point(29, 180);
+            this.textBoxPrecio.Name = "textBoxPrecio";
+            this.textBoxPrecio.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPrecio.TabIndex = 8;
+            // 
             // GestionProductos
             // 
-            this.ClientSize = new System.Drawing.Size(478, 261);
+            this.ClientSize = new System.Drawing.Size(478, 437);
+            this.Controls.Add(this.textBoxPrecio);
+            this.Controls.Add(this.comboBoxTipo);
+            this.Controls.Add(this.buttonAddProd);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.label2);
             this.Name = "GestionProductos";
             this.ResumeLayout(false);
@@ -76,7 +130,12 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttonAddProd;
+        private System.Windows.Forms.ComboBox comboBoxTipo;
+        private System.Windows.Forms.TextBox textBoxPrecio;
     }
 }
