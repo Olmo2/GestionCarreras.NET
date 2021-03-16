@@ -1,0 +1,14 @@
+﻿<Window x:Class="GestionCarreras.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionCarreras"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="ListBoxProductos" HorizontalAlignment="Left" Height="100" Margin="26,80,0,0" VerticalAlignment="Top" Width="167"/>
+        <Button x:Name="buttonGestionProductos" Content="Gestionar Productos" HorizontalAlignment="Left" Margin="26,37,0,0" VerticalAlignment="Top" Width="167" Click="ButtonGestionProductos_Click"/>
+
+    </Grid>
+</Window>
