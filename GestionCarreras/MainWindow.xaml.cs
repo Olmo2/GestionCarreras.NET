@@ -21,16 +21,20 @@ namespace GestionCarreras
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<Producto> listaProds;
+
         public MainWindow()
         {
             InitializeComponent();
-            List<Producto> lista = new List<Producto>();
-            lista.Add(new Producto("Pan", "Comida", 20));
-            lista.Add(new Producto("Manolo Lama", "Comida", 20));
-            lista.Add(new Producto("Cebolla", "Comida", 20));
-            lista.Add(new Producto("Pako", "Comida", 20));
-            lista.Add(new Producto("Nachos", "Comida", 20));
-            foreach (Producto p in lista){
+
+            listaProds = new List<Producto>();
+            listaProds.Add(new Producto("Pan", "Comida", 20));
+            listaProds.Add(new Producto("Manolo Lama", "Comida", 20));
+            listaProds.Add(new Producto("Cebolla", "Comida", 20));
+            listaProds.Add(new Producto("Pako", "Comida", 20));
+            listaProds.Add(new Producto("Nachos", "Comida", 20));
+            foreach (Producto p in listaProds)
+            {
 
                // ComboBoxItem cbi = new ComboBoxItem();
                 ListBoxItem lbi = new ListBoxItem();
@@ -44,7 +48,8 @@ namespace GestionCarreras
         private void ButtonGestionProductos_Click(object sender, RoutedEventArgs e)
         {
 
-            GestionProductos gP = new GestionProductos();
+            GestionProductos gP = new GestionProductos(listaProds);
+            
             gP.Show();
                 
         }

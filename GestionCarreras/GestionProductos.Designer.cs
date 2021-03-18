@@ -36,6 +36,12 @@
             this.buttonAddProd = new System.Windows.Forms.Button();
             this.comboBoxTipo = new System.Windows.Forms.ComboBox();
             this.textBoxPrecio = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.buttonEditarProd = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.buttonEliminarProd = new System.Windows.Forms.Button();
+            this.listBoxEditarProducto = new System.Windows.Forms.ListBox();
+            this.listBoxBorrarProducto = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label2
@@ -52,7 +58,7 @@
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(28, 71);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNombre.Size = new System.Drawing.Size(130, 20);
             this.textBoxNombre.TabIndex = 1;
             // 
             // label3
@@ -86,7 +92,7 @@
             // 
             this.buttonAddProd.Location = new System.Drawing.Point(29, 214);
             this.buttonAddProd.Name = "buttonAddProd";
-            this.buttonAddProd.Size = new System.Drawing.Size(100, 23);
+            this.buttonAddProd.Size = new System.Drawing.Size(129, 23);
             this.buttonAddProd.TabIndex = 6;
             this.buttonAddProd.Text = "Añadir Producto";
             this.buttonAddProd.UseVisualStyleBackColor = true;
@@ -97,7 +103,7 @@
             this.comboBoxTipo.FormattingEnabled = true;
             this.comboBoxTipo.Location = new System.Drawing.Point(28, 127);
             this.comboBoxTipo.Name = "comboBoxTipo";
-            this.comboBoxTipo.Size = new System.Drawing.Size(101, 21);
+            this.comboBoxTipo.Size = new System.Drawing.Size(130, 21);
             this.comboBoxTipo.TabIndex = 7;
             this.comboBoxTipo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -105,12 +111,74 @@
             // 
             this.textBoxPrecio.Location = new System.Drawing.Point(29, 180);
             this.textBoxPrecio.Name = "textBoxPrecio";
-            this.textBoxPrecio.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPrecio.Size = new System.Drawing.Size(129, 20);
             this.textBoxPrecio.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label4.Location = new System.Drawing.Point(216, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Editar Producto";
+            // 
+            // buttonEditarProd
+            // 
+            this.buttonEditarProd.Location = new System.Drawing.Point(220, 214);
+            this.buttonEditarProd.Name = "buttonEditarProd";
+            this.buttonEditarProd.Size = new System.Drawing.Size(121, 23);
+            this.buttonEditarProd.TabIndex = 11;
+            this.buttonEditarProd.Text = "Editar Producto";
+            this.buttonEditarProd.UseVisualStyleBackColor = true;
+            this.buttonEditarProd.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label7.Location = new System.Drawing.Point(427, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(142, 20);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Eliminar Producto";
+            // 
+            // buttonEliminarProd
+            // 
+            this.buttonEliminarProd.Location = new System.Drawing.Point(431, 214);
+            this.buttonEliminarProd.Name = "buttonEliminarProd";
+            this.buttonEliminarProd.Size = new System.Drawing.Size(138, 23);
+            this.buttonEliminarProd.TabIndex = 14;
+            this.buttonEliminarProd.Text = "Eliminar Producto";
+            this.buttonEliminarProd.UseVisualStyleBackColor = true;
+            this.buttonEliminarProd.Click += new System.EventHandler(this.buttonEliminarProd_Click);
+            // 
+            // listBoxEditarProducto
+            // 
+            this.listBoxEditarProducto.FormattingEnabled = true;
+            this.listBoxEditarProducto.Location = new System.Drawing.Point(220, 55);
+            this.listBoxEditarProducto.Name = "listBoxEditarProducto";
+            this.listBoxEditarProducto.Size = new System.Drawing.Size(120, 147);
+            this.listBoxEditarProducto.TabIndex = 15;
+            // 
+            // listBoxBorrarProducto
+            // 
+            this.listBoxBorrarProducto.FormattingEnabled = true;
+            this.listBoxBorrarProducto.Location = new System.Drawing.Point(431, 55);
+            this.listBoxBorrarProducto.Name = "listBoxBorrarProducto";
+            this.listBoxBorrarProducto.Size = new System.Drawing.Size(138, 147);
+            this.listBoxBorrarProducto.TabIndex = 16;
             // 
             // GestionProductos
             // 
-            this.ClientSize = new System.Drawing.Size(478, 437);
+            this.ClientSize = new System.Drawing.Size(600, 273);
+            this.Controls.Add(this.listBoxBorrarProducto);
+            this.Controls.Add(this.listBoxEditarProducto);
+            this.Controls.Add(this.buttonEliminarProd);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.buttonEditarProd);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxPrecio);
             this.Controls.Add(this.comboBoxTipo);
             this.Controls.Add(this.buttonAddProd);
@@ -137,5 +205,11 @@
         private System.Windows.Forms.Button buttonAddProd;
         private System.Windows.Forms.ComboBox comboBoxTipo;
         private System.Windows.Forms.TextBox textBoxPrecio;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonEditarProd;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonEliminarProd;
+        private System.Windows.Forms.ListBox listBoxEditarProducto;
+        private System.Windows.Forms.ListBox listBoxBorrarProducto;
     }
 }

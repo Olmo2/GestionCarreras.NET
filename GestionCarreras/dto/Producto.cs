@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestionCarreras.dto
 {
-    class Producto
+   public class Producto
     {
         public String nombre { get; set; }
         public String tipo { get; set; }
