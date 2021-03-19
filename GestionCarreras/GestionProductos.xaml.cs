@@ -18,21 +18,20 @@ namespace GestionCarreras
     /// <summary>
     /// Lógica de interacción para GestioProductos2.xaml
     /// </summary>
-    public partial class GestionProductos2 : Window
+    public partial class GestionProductos : Window
     {
-        public GestionProductos2()
+        public GestionProductos()
         {
             InitializeComponent();
-            comboBoxTipo.Items.Add("Bebida");
+          /*  comboBoxTipo.Items.Add("Bebida");
             comboBoxTipo.Items.Add("Comida");
-            comboBoxTipo.Items.Add("Material Sanitario");
+            comboBoxTipo.Items.Add("Material Sanitario");*/
             this.DataContext = ServicioListas.sV;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            int i = listBoxProductos.SelectedIndex;
-            FormEditarProducto fep = new FormEditarProducto((Producto)listBoxProductos.Items[i], i);
+            FormEditarProducto fep = new FormEditarProducto((Producto)listBoxProductos.Items[listBoxProductos.SelectedIndex], listBoxProductos.SelectedIndex);
             fep.Show();
         }
 

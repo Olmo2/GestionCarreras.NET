@@ -1,29 +1,34 @@
 ﻿using GestionCarreras.dto;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 
 namespace GestionCarreras
 {
-    
-    public partial class FormEditarProducto : Form
+    /// <summary>
+    /// Lógica de interacción para FormEditarProducto2.xaml
+    /// </summary>
+    public partial class FormEditarProducto : Window
     {
-        public int index;
-        
+        int index;
         public FormEditarProducto(Producto p, int i)
         {
-           
             InitializeComponent();
+            this.DataContext = ServicioListas.sV;
             index = i;
-            comboBoxTipo.Items.Add("Bebida");
+           /* comboBoxTipo.Items.Add("Bebida");
             comboBoxTipo.Items.Add("Comida");
-            comboBoxTipo.Items.Add("Material Sanitario");
+            comboBoxTipo.Items.Add("Material Sanitario");*/
 
             textBoxNombre.Text = p.nombre;
 
@@ -39,18 +44,17 @@ namespace GestionCarreras
                     comboBoxTipo.SelectedIndex = 2;
                     break;
             }
-            
+
             textBoxPrecio.Text = p.precio.ToString();
         }
 
-
-        private void buttonAddProd_Click(object sender, EventArgs e)
+        private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
-            Producto p = new Producto(textBoxNombre.Text, comboBoxTipo.SelectedItem.ToString(),int.Parse(textBoxPrecio.Text));
+            Producto p = new Producto(textBoxNombre.Text, comboBoxTipo.SelectedItem.ToString(), int.Parse(textBoxPrecio.Text));
             ServicioListas.sV.listaProductos.RemoveAt(index);
             ServicioListas.sV.listaProductos.Add(p);
             
-            this.Dispose();
+            this.Close();
 
         }
     }

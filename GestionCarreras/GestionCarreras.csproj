@@ -57,7 +57,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="GestionProductos2.xaml">
+    <Page Include="FormEditarProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GestionProductos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -69,22 +73,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="dto\Avituallamiento.cs" />
+    <Compile Include="dto\Persona.cs" />
     <Compile Include="dto\Producto.cs" />
     <Compile Include="dto\ServicioListas.cs" />
-    <Compile Include="FormEditarProducto.cs">
-      <SubType>Form</SubType>
+    <Compile Include="FormEditarProducto.xaml.cs">
+      <DependentUpon>FormEditarProducto.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FormEditarProducto.Designer.cs">
-      <DependentUpon>FormEditarProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GestionProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GestionProductos.Designer.cs">
-      <DependentUpon>GestionProductos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GestionProductos2.xaml.cs">
-      <DependentUpon>GestionProductos2.xaml</DependentUpon>
+    <Compile Include="GestionProductos.xaml.cs">
+      <DependentUpon>GestionProductos.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -105,12 +102,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="FormEditarProducto.resx">
-      <DependentUpon>FormEditarProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GestionProductos.resx">
-      <DependentUpon>GestionProductos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -122,6 +113,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="R2-D2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="X-Wing2.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

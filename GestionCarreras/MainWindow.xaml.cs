@@ -22,49 +22,22 @@ namespace GestionCarreras
     public partial class MainWindow : Window
     {
 
-        /*public void rellenar()
-        {
-            ListBoxProductos.Items.Clear();
-            foreach (Producto p in ServicioListas.sV.listaProductos)
-            {
-                // ComboBoxItem cbi = new ComboBoxItem();
-                ListBoxItem lbi = new ListBoxItem();
-                // cbi.Content = p;
-                lbi.Content = p;
-                // comboBoxProductos.Items.Add(cbi);
-                ListBoxProductos.Items.Add(lbi);
-            }
-        }*/
-
-      
-       
         public MainWindow()
         {
             
             InitializeComponent();
-           ServicioListas.sV.listaProductos.Add(new Producto("Pan", "Comida", 20));
-            ServicioListas.sV.listaProductos.Add(new Producto("Manolo Lama", "Comida", 20));
-            ServicioListas.sV.listaProductos.Add(new Producto("Cebolla", "Comida", 20));
-            ServicioListas.sV.listaProductos.Add(new Producto("Pako", "Comida", 20));
-            ServicioListas.sV.listaProductos.Add(new Producto("Nachos", "Comida", 20));
-           // listaProductos = new List<Producto>();
+            this.WindowStartupLocation= WindowStartupLocation.CenterScreen;
             this.DataContext = ServicioListas.sV;
-           // rellenar();
+          
         }
 
         private void ButtonGestionProductos_Click(object sender, RoutedEventArgs e)
         {
 
-            GestioProductos2 gP = new GestioProductos2();
-            
+            GestionProductos gP = new GestionProductos();
             gP.Show();
                 
         }
-
-        private void ListBoxProductos_GotFocus(Object sender, EventArgs e)
-        {
-
-            MessageBox.Show("You are in the Control.GotFocus event."); 
-        }
+     
     }
 }

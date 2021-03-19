@@ -5,14 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestionCarreras"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Gestion de Carreras" Height="250" Width="500" Icon="X-Wing2.ico">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="779*"/>
             <ColumnDefinition Width="13*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="ListBoxProductos" ItemsSource="{Binding listaProductos}" HorizontalAlignment="Left" Height="100" Margin="26,80,0,0" VerticalAlignment="Top" Width="167"/>
-        <Button x:Name="buttonGestionProductos" Content="Gestionar Productos" HorizontalAlignment="Left" Margin="26,37,0,0" VerticalAlignment="Top" Width="167" Click="ButtonGestionProductos_Click"/>
+        <ListBox x:Name="ListBoxProductos" ItemsSource="{Binding listaProductos}" HorizontalAlignment="Left" Height="100" Margin="26,80,0,0" VerticalAlignment="Top" Width="160"/>
+        <Button x:Name="buttonGestionProductos" Content="Gestionar Productos" HorizontalAlignment="Left" Margin="26,37,0,0" VerticalAlignment="Top" Width="160" Click="ButtonGestionProductos_Click"/>
+        <Button x:Name="buttonAvituallamieno" Content="Gestionar Avituallamientos" HorizontalAlignment="Left" Margin="298,37,0,0" VerticalAlignment="Top" Width="160"/>
+        <ListBox x:Name="ListBoxProductos_Copy" ItemsSource="{Binding listaAvituallamientos}" HorizontalAlignment="Left" Height="100" Margin="298,80,0,0" VerticalAlignment="Top" Width="160"/>
 
     </Grid>
 </Window>
