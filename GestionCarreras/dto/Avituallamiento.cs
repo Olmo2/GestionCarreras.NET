@@ -13,7 +13,6 @@ namespace GestionCarreras.dto
         public String carrera { get; set; }
         public int puntoKm { get; set; }
         public Persona contacto {get; set; }
-
         public ObservableCollection<Producto> material { get; set; }
 
         public Avituallamiento(string carrera, int puntoKm, Persona contacto, ObservableCollection<Producto> material)

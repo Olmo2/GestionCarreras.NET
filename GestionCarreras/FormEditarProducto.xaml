@@ -14,7 +14,7 @@
         <ComboBox x:Name="comboBoxTipo" ItemsSource="{Binding Path=listaTipos}" HorizontalAlignment="Left" Margin="30,180,0,0" VerticalAlignment="Top" Width="140"/>
         <Label Content="Precio" HorizontalAlignment="Left" Margin="30,218,0,0" VerticalAlignment="Top" FontSize="14"/>
         <TextBox x:Name="textBoxPrecio" HorizontalAlignment="Left" Height="23" Margin="30,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
-        <Button x:Name="buttonAdd" Content="Añadir Prducto" HorizontalAlignment="Left" Margin="30,311,0,0" VerticalAlignment="Top" Width="140" Height="38" Click="buttonAdd_Click"/>
+        <Button x:Name="buttonAdd" Content="Editar Producto" HorizontalAlignment="Left" Margin="30,311,0,0" VerticalAlignment="Top" Width="140" Height="38" Click="buttonAdd_Click"/>
 
     </Grid>
 </Window>

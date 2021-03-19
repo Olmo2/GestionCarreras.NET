@@ -38,6 +38,11 @@ namespace GestionCarreras
             gP.Show();
                 
         }
-     
+
+        private void ButtonGestionAvituallamieno_Click(object sender, RoutedEventArgs e)
+        {
+            GestionAvituallamientos gA = new GestionAvituallamientos();
+            gA.Show();
+        }
     }
 }

@@ -24,6 +24,7 @@ namespace GestionCarreras
         public FormEditarProducto(Producto p, int i)
         {
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             this.DataContext = ServicioListas.sV;
             index = i;
            /* comboBoxTipo.Items.Add("Bebida");

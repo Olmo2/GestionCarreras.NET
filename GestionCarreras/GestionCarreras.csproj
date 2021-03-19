@@ -61,6 +61,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="GestionAvituallamientos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GestionProductos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -79,6 +83,9 @@
     <Compile Include="dto\ServicioListas.cs" />
     <Compile Include="FormEditarProducto.xaml.cs">
       <DependentUpon>FormEditarProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GestionAvituallamientos.xaml.cs">
+      <DependentUpon>GestionAvituallamientos.xaml</DependentUpon>
     </Compile>
     <Compile Include="GestionProductos.xaml.cs">
       <DependentUpon>GestionProductos.xaml</DependentUpon>

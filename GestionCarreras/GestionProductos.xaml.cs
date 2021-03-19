@@ -23,9 +23,10 @@ namespace GestionCarreras
         public GestionProductos()
         {
             InitializeComponent();
-          /*  comboBoxTipo.Items.Add("Bebida");
-            comboBoxTipo.Items.Add("Comida");
-            comboBoxTipo.Items.Add("Material Sanitario");*/
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            /*  comboBoxTipo.Items.Add("Bebida");
+              comboBoxTipo.Items.Add("Comida");
+              comboBoxTipo.Items.Add("Material Sanitario");*/
             this.DataContext = ServicioListas.sV;
         }
 
@@ -35,9 +36,17 @@ namespace GestionCarreras
             fep.Show();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
+       
 
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Producto p = new Producto(textBoxNombre.Text, comboBoxTipo.SelectedItem.ToString(), int.Parse(textBoxPrecio.Text));
+            ServicioListas.sV.listaProductos.Add(p);
+        }
+
+        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            ServicioListas.sV.listaProductos.RemoveAt(listBoxProductos.SelectedIndex);
         }
     }
 }

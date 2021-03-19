@@ -15,10 +15,10 @@
         <Label Content="Precio" HorizontalAlignment="Left" Margin="30,218,0,0" VerticalAlignment="Top" FontSize="14"/>
         <TextBox x:Name="textBoxPrecio" HorizontalAlignment="Left" Height="23" Margin="30,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
         <Label Content="Editar/Borrar Producto" HorizontalAlignment="Left" Margin="338,20,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Button x:Name="buttonAdd" Content="Añadir Prducto" HorizontalAlignment="Left" Margin="30,311,0,0" VerticalAlignment="Top" Width="140" Height="38"/>
+        <Button x:Name="buttonAdd" Content="Añadir Prducto" HorizontalAlignment="Left" Margin="30,311,0,0" VerticalAlignment="Top" Width="140" Height="38" Click="ButtonAdd_Click"/>
         <ListBox x:Name="listBoxProductos" ItemsSource="{Binding Path=listaProductos}" HorizontalAlignment="Left" Height="202" Margin="338,73,0,0" VerticalAlignment="Top" Width="411"/>
         <Button Content="Editar Producto" HorizontalAlignment="Left" Margin="338,311,0,0" VerticalAlignment="Top" Width="132" Height="38" Click="Button_Click"/>
-        <Button Content="Borrar Producto " HorizontalAlignment="Left" Margin="621,311,0,0" VerticalAlignment="Top" Width="128" Height="38" Click="Button_Click_1"/>
+        <Button x:Name="buttonDelete" Content="Borrar Producto " HorizontalAlignment="Left" Margin="621,311,0,0" VerticalAlignment="Top" Width="128" Height="38" Click="ButtonDelete_Click" />
 
     </Grid>
 </Window>
