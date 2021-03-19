@@ -1,4 +1,6 @@
-﻿namespace GestionCarreras
+﻿using GestionCarreras.dto;
+
+namespace GestionCarreras
 {
     partial class GestionProductos
     {
@@ -41,7 +43,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.buttonEliminarProd = new System.Windows.Forms.Button();
             this.listBoxEditarProducto = new System.Windows.Forms.ListBox();
-            this.listBoxBorrarProducto = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label2
@@ -156,24 +157,17 @@
             // 
             // listBoxEditarProducto
             // 
+            this.listBoxEditarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.listBoxEditarProducto.FormattingEnabled = true;
+            this.listBoxEditarProducto.ItemHeight = 20;
             this.listBoxEditarProducto.Location = new System.Drawing.Point(220, 55);
             this.listBoxEditarProducto.Name = "listBoxEditarProducto";
-            this.listBoxEditarProducto.Size = new System.Drawing.Size(120, 147);
+            this.listBoxEditarProducto.Size = new System.Drawing.Size(349, 144);
             this.listBoxEditarProducto.TabIndex = 15;
-            // 
-            // listBoxBorrarProducto
-            // 
-            this.listBoxBorrarProducto.FormattingEnabled = true;
-            this.listBoxBorrarProducto.Location = new System.Drawing.Point(431, 55);
-            this.listBoxBorrarProducto.Name = "listBoxBorrarProducto";
-            this.listBoxBorrarProducto.Size = new System.Drawing.Size(138, 147);
-            this.listBoxBorrarProducto.TabIndex = 16;
             // 
             // GestionProductos
             // 
             this.ClientSize = new System.Drawing.Size(600, 273);
-            this.Controls.Add(this.listBoxBorrarProducto);
             this.Controls.Add(this.listBoxEditarProducto);
             this.Controls.Add(this.buttonEliminarProd);
             this.Controls.Add(this.label7);
@@ -195,8 +189,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.Label label3;
@@ -210,6 +202,5 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonEliminarProd;
         private System.Windows.Forms.ListBox listBoxEditarProducto;
-        private System.Windows.Forms.ListBox listBoxBorrarProducto;
     }
 }

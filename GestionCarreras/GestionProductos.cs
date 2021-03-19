@@ -13,22 +13,26 @@ namespace GestionCarreras
 {
     public partial class GestionProductos : Form
     {
-        public List<Producto> listaProds;
-        public GestionProductos(List<Producto> lP)
+       
+        
+
+        public GestionProductos(MainWindow mainWindow)
         {
-            listaProds = new List<Producto>();
-            listaProds = lP;
+           
             InitializeComponent();
             comboBoxTipo.Items.Add("Bebida");
             comboBoxTipo.Items.Add("Comida");
             comboBoxTipo.Items.Add("Material Sanitario");
-         
-            foreach (Producto p in listaProds)
-            {
-                listBoxEditarProducto.Items.Add(p);
-                listBoxBorrarProducto.Items.Add(p);
-            }
-           
+
+            listBoxEditarProducto.DataSource = ServicioListas.sV.listaProductos;
+            listBoxEditarProducto.DataBindings.Add(new Binding("Text", ServicioListas.sV, "listaProductos"));
+            
+            /* foreach (Producto p in ServicioListas.sV.listaProductos)
+             {
+                 listBoxEditarProducto.Items.Add(p);
+                 listBoxBorrarProducto.Items.Add(p);
+             }*/
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -49,7 +53,7 @@ namespace GestionCarreras
         private void button1_Click(object sender, EventArgs e)
         {
             int i= listBoxEditarProducto.SelectedIndex;
-            FormEditarProducto fep = new FormEditarProducto((Producto)listBoxEditarProducto.Items[i],i,listaProds);
+            FormEditarProducto fep = new FormEditarProducto((Producto)listBoxEditarProducto.Items[i],i);
             fep.Show();
         }
 
@@ -57,5 +61,6 @@ namespace GestionCarreras
         {
             //Borar un producto 
         }
+
     }
 }

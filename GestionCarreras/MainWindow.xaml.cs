@@ -21,37 +21,50 @@ namespace GestionCarreras
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<Producto> listaProds;
 
-        public MainWindow()
+        /*public void rellenar()
         {
-            InitializeComponent();
-
-            listaProds = new List<Producto>();
-            listaProds.Add(new Producto("Pan", "Comida", 20));
-            listaProds.Add(new Producto("Manolo Lama", "Comida", 20));
-            listaProds.Add(new Producto("Cebolla", "Comida", 20));
-            listaProds.Add(new Producto("Pako", "Comida", 20));
-            listaProds.Add(new Producto("Nachos", "Comida", 20));
-            foreach (Producto p in listaProds)
+            ListBoxProductos.Items.Clear();
+            foreach (Producto p in ServicioListas.sV.listaProductos)
             {
-
-               // ComboBoxItem cbi = new ComboBoxItem();
+                // ComboBoxItem cbi = new ComboBoxItem();
                 ListBoxItem lbi = new ListBoxItem();
-               // cbi.Content = p;
+                // cbi.Content = p;
                 lbi.Content = p;
-               // comboBoxProductos.Items.Add(cbi);
+                // comboBoxProductos.Items.Add(cbi);
                 ListBoxProductos.Items.Add(lbi);
             }
+        }*/
+
+      
+       
+        public MainWindow()
+        {
+            
+            InitializeComponent();
+           ServicioListas.sV.listaProductos.Add(new Producto("Pan", "Comida", 20));
+            ServicioListas.sV.listaProductos.Add(new Producto("Manolo Lama", "Comida", 20));
+            ServicioListas.sV.listaProductos.Add(new Producto("Cebolla", "Comida", 20));
+            ServicioListas.sV.listaProductos.Add(new Producto("Pako", "Comida", 20));
+            ServicioListas.sV.listaProductos.Add(new Producto("Nachos", "Comida", 20));
+           // listaProductos = new List<Producto>();
+            this.DataContext = ServicioListas.sV;
+           // rellenar();
         }
 
         private void ButtonGestionProductos_Click(object sender, RoutedEventArgs e)
         {
 
-            GestionProductos gP = new GestionProductos(listaProds);
+            GestioProductos2 gP = new GestioProductos2();
             
             gP.Show();
                 
+        }
+
+        private void ListBoxProductos_GotFocus(Object sender, EventArgs e)
+        {
+
+            MessageBox.Show("You are in the Control.GotFocus event."); 
         }
     }
 }
