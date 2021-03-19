@@ -29,13 +29,15 @@ namespace GestionCarreras
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            
+            //listBoxAvituallamientos.SelectedItems.Cast<Producto>
+            ObservableCollection<Producto> lista = new ObservableCollection<Producto>();
+
             Avituallamiento a = new Avituallamiento(
                     textBoxCarrera.Text,
                     int.Parse(textBoxPunto.Text),
                     new Persona(textBoxNombre.Text,
                     int.Parse(textBoxPunto.Text)), 
-                    new ObservableCollection<Producto>((ObservableCollection<Producto>)listBoxAvituallamientos.SelectedItems));
+                    lista);
             ServicioListas.sV.listaAvituallamientos.Add(a);
         }
     }
