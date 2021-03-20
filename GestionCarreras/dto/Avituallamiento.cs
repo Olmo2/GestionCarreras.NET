@@ -13,9 +13,11 @@ namespace GestionCarreras.dto
         public String carrera { get; set; }
         public int puntoKm { get; set; }
         public Persona contacto {get; set; }
-        public ObservableCollection<Producto> material { get; set; }
+        public ObservableCollection<Material> material { get; set; }
 
-        public Avituallamiento(string carrera, int puntoKm, Persona contacto, ObservableCollection<Producto> material)
+        public Dictionary<Producto, int> map { get; set; }
+
+        public Avituallamiento(string carrera, int puntoKm, Persona contacto, ObservableCollection<Material> material)
         {
             this.carrera = carrera;
             this.puntoKm = puntoKm;
@@ -25,7 +27,9 @@ namespace GestionCarreras.dto
 
         public override string ToString()
         {
-            return carrera + " KM: " +puntoKm;
+            //  return carrera + " KM: " +puntoKm;
+
+            return "Carrera: " + carrera + " Punto KM: "+ puntoKm + "Contacto: " +  contacto.nombre + contacto.tlf + material[0] + material[1];
         }
     }
 }

@@ -78,6 +78,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="dto\Avituallamiento.cs" />
+    <Compile Include="dto\Material.cs" />
     <Compile Include="dto\Persona.cs" />
     <Compile Include="dto\Producto.cs" />
     <Compile Include="dto\ServicioListas.cs" />
