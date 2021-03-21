@@ -29,7 +29,7 @@ namespace GestionCarreras.dto
         {
             //  return carrera + " KM: " +puntoKm;
 
-            return "Carrera: " + carrera + " Punto KM: "+ puntoKm + "Contacto: " +  contacto.nombre + contacto.tlf + material[0] + material[1];
+            return "Carrera: " + carrera + " Punto KM: "+ puntoKm + "Contacto: " +  "Nombre: "+contacto.nombre + " Tlf: "+ contacto.tlf;
         }
     }
 }

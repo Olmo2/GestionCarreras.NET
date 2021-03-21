@@ -63,7 +63,7 @@ namespace GestionCarreras
                 if(listBoxMateriales.Items.IndexOf(o)==0)
                 selectedItemIndexes.Add(listBoxMateriales.Items.IndexOf(o));
                 else if (listBoxMateriales.Items.IndexOf(o) % 2 == 0)
-                    selectedItemIndexes.Add(listBoxMateriales.Items.IndexOf(o)-1);
+                    selectedItemIndexes.Add(listBoxMateriales.Items.IndexOf(o)/2);
             }
 
             foreach (int i in selectedItemIndexes)
@@ -83,5 +83,25 @@ namespace GestionCarreras
         {
             ServicioListas.sV.listaAvituallamientos.RemoveAt(listBoxAvituallamientos.SelectedIndex);
         }
+
+        private void buttonEdit_Click(object sender, RoutedEventArgs e)
+        {
+            FormEditarAvituallamiento fea = new FormEditarAvituallamiento((Avituallamiento)listBoxAvituallamientos.SelectedItem, listBoxAvituallamientos.SelectedIndex);
+            fea.Show();
+            /*listBoxMateriales.Items.Clear();
+            foreach (Material m in ServicioListas.sV.listaMateriales)
+            {
+                ListBoxItem lbi = new ListBoxItem();
+                ListBoxItem lbi2 = new ListBoxItem();
+                lbi.Content = m.producto;
+                lbi2.Content = m.textBox;
+
+                listBoxMateriales.Items.Add(lbi);
+                listBoxMateriales.Items.Add(lbi2);
+
+
+            }*/
+        }
+        
     }
 }

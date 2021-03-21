@@ -57,11 +57,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="FormEditarAvituallamiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormEditarCarrera.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FormEditarProducto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GestionAvituallamientos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GestionCarrerasWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -78,15 +90,25 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="dto\Avituallamiento.cs" />
+    <Compile Include="dto\Carrera.cs" />
     <Compile Include="dto\Material.cs" />
     <Compile Include="dto\Persona.cs" />
     <Compile Include="dto\Producto.cs" />
     <Compile Include="dto\ServicioListas.cs" />
+    <Compile Include="FormEditarAvituallamiento.xaml.cs">
+      <DependentUpon>FormEditarAvituallamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditarCarrera.xaml.cs">
+      <DependentUpon>FormEditarCarrera.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FormEditarProducto.xaml.cs">
       <DependentUpon>FormEditarProducto.xaml</DependentUpon>
     </Compile>
     <Compile Include="GestionAvituallamientos.xaml.cs">
       <DependentUpon>GestionAvituallamientos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCarrerasWindow.xaml.cs">
+      <DependentUpon>GestionCarrerasWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="GestionProductos.xaml.cs">
       <DependentUpon>GestionProductos.xaml</DependentUpon>

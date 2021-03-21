@@ -19,6 +19,8 @@ namespace GestionCarreras.dto
 
         public ObservableCollection<Material> listaMateriales { get; set; } = new ObservableCollection<Material>();
 
+        public ObservableCollection<Carrera> listaCarreras { get; set; } = new ObservableCollection<Carrera>();
+
 
 
         private ServicioListas()
@@ -39,9 +41,25 @@ namespace GestionCarreras.dto
             listaMateriales.Add(new Material(listaProductos[3], 99));
             listaMateriales.Add(new Material(listaProductos[4], 75));
 
-            listaAvituallamientos.Add(new Avituallamiento("Bonta", 420, new Persona("Anakin", 666666666), listaMateriales));
+            ObservableCollection<Material> listaM = new ObservableCollection<Material>();
+
+            listaM.Add(new Material(listaProductos[0], 10));
+            listaM.Add(new Material(listaProductos[1], 5));
+            listaM.Add(new Material(listaProductos[2], 6));
+           
+
+            listaAvituallamientos.Add(new Avituallamiento("Bonta", 420, new Persona("Anakin", 666666666), listaM));
+            listaAvituallamientos.Add(new Avituallamiento("Monaco", 956, new Persona("Olmo", 666666666), listaM));
+
+
+            ObservableCollection<Avituallamiento> listaA = new ObservableCollection<Avituallamiento>();
+            listaA.Add(new Avituallamiento("Bonta", 420, new Persona("Anakin", 666666666), listaM));
+            listaCarreras.Add(new Carrera("Bonta", listaA));
         }
 
-   
+
+      
+
+
     }
 }

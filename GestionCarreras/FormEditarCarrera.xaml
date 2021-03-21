@@ -1,0 +1,18 @@
+﻿<Window x:Class="GestionCarreras.FormEditarCarrera"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionCarreras"
+        mc:Ignorable="d"
+        Title="FormEditarCarrera" Height="500" Width="250" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Editar Carrera" HorizontalAlignment="Left" Margin="41,43,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="textBoxNombre" HorizontalAlignment="Left" Height="23" Margin="41,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="41,82,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Avituallamientos" HorizontalAlignment="Left" Margin="41,159,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button x:Name="buttonAdd" Content="Añadir Carrera" HorizontalAlignment="Left" Margin="41,377,0,0" VerticalAlignment="Top" Width="140" Height="38" Click="ButtonAdd_Click"/>
+        <ListBox x:Name="listBoxAvituallamientos" ItemsSource="{Binding Path=listaAvituallamientos}"  HorizontalAlignment="Left" Height="139" Margin="41,188,0,0" VerticalAlignment="Top" Width="140" SelectionMode="Extended"/>
+
+    </Grid>
+</Window>

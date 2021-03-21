@@ -44,5 +44,11 @@ namespace GestionCarreras
             GestionAvituallamientos gA = new GestionAvituallamientos();
             gA.Show();
         }
+
+        private void buttonGestionCarrera_Click(object sender, RoutedEventArgs e)
+        {
+            GestionCarrerasWindow gC = new GestionCarrerasWindow();
+            gC.Show();
+        }
     }
 }
