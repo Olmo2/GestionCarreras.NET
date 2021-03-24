@@ -32,6 +32,8 @@ namespace GestionCarreras
             textBoxNombre.Text = a.contacto.nombre;
             textBoxTlf.Text = a.contacto.tlf.ToString();
             textBoxPunto.Text = a.puntoKm.ToString();
+            textBoxPatrocinador.Text = a.patrocinador;
+            textBoxImporte.Text = a.importe.ToString();
             foreach (Material m in a.material)
             {
                 ListBoxItem lbi = new ListBoxItem();
@@ -65,11 +67,13 @@ namespace GestionCarreras
                 lista.Add(a.material[i]);
             }
             Avituallamiento a1 = new Avituallamiento(
-                    textBoxCarrera.Text,
-                    int.Parse(textBoxPunto.Text),
-                    new Persona(textBoxNombre.Text,
-                    int.Parse(textBoxPunto.Text)),
-                    lista);
+                     textBoxCarrera.Text,
+                     int.Parse(textBoxPunto.Text),
+                     new Persona(textBoxNombre.Text,
+                     int.Parse(textBoxPunto.Text)),
+                     lista,
+                     textBoxPatrocinador.Text,
+                     int.Parse(textBoxImporte.Text));
             ServicioListas.sV.listaAvituallamientos.RemoveAt(index);
             ServicioListas.sV.listaAvituallamientos.Add(a1);
             this.Close();

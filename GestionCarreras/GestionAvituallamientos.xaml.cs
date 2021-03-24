@@ -70,12 +70,14 @@ namespace GestionCarreras
             {
                 lista.Add(ServicioListas.sV.listaMateriales[i]);
             }
-            Avituallamiento a = new Avituallamiento(
-                    textBoxCarrera.Text,
-                    int.Parse(textBoxPunto.Text),
-                    new Persona(textBoxNombre.Text,
-                    int.Parse(textBoxPunto.Text)), 
-                    lista);
+             Avituallamiento a = new Avituallamiento(
+                     textBoxCarrera.Text,
+                     int.Parse(textBoxPunto.Text),
+                     new Persona(textBoxNombre.Text,
+                     int.Parse(textBoxPunto.Text)), 
+                     lista,
+                     textBoxPatrocinador.Text,
+                     int.Parse(textBoxImporte.Text));
             ServicioListas.sV.listaAvituallamientos.Add(a);
         }
 

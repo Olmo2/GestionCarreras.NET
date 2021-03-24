@@ -50,5 +50,11 @@ namespace GestionCarreras
             GestionCarrerasWindow gC = new GestionCarrerasWindow();
             gC.Show();
         }
+
+        private void buttonPatrocinadores_Click(object sender, RoutedEventArgs e)
+        {
+            Patrocinadores p = new Patrocinadores((Carrera)listBoxCarreras.SelectedItem);
+            p.Show();
+        }
     }
 }
